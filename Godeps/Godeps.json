@@ -1,0 +1,20 @@
+{
+	"ImportPath": "github.com/heroku/go-getting-started",
+	"GoVersion": "go1.8",
+	"GodepVersion": "v79",
+	"Deps": [
+		{
+			"ImportPath": "github.com/line/line-bot-sdk-go/linebot",
+			"Comment": "1.0.0-72-g4e62357",
+			"Rev": "4e6235751175cf95f0dceec7a49bf41db0b0b02b"
+		},
+		{
+			"ImportPath": "golang.org/x/net/context",
+			"Rev": "8351a756f30f1297fe94bbf4b767ec589c6ea6d0"
+		},
+		{
+			"ImportPath": "golang.org/x/net/context/ctxhttp",
+			"Rev": "8351a756f30f1297fe94bbf4b767ec589c6ea6d0"
+		}
+	]
+}

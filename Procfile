@@ -1,1 +1,1 @@
-web: slack-bot-fgo
+web: go-getting-started
