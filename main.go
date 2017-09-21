@@ -20,6 +20,8 @@ import (
 	"os"
 
 	"github.com/line/line-bot-sdk-go/linebot"
+	"math/rand"
+	"time"
 )
 
 func main() {
@@ -46,7 +48,8 @@ func main() {
 			if event.Type == linebot.EventTypeMessage {
 				switch message := event.Message.(type) {
 				case *linebot.TextMessage:
-					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("thanks!")).Do(); err != nil {
+					postMessage := linebot.NewTextMessage(getResMessage(message.Text))
+					if _, err = bot.ReplyMessage(event.ReplyToken, postMessage).Do(); err != nil {
 						log.Print(err)
 					}
 				}
@@ -58,4 +61,18 @@ func main() {
 	if err := http.ListenAndServe(":"+os.Getenv("PORT"), nil); err != nil {
 		log.Fatal(err)
 	}
+}
+
+func getResMessage(reqMessage string) (message string) {
+	resMessages := [3]string{"わかるわかる", "それで？それで？", "からの〜？"}
+
+	rand.Seed(time.Now().UnixNano())
+	if rand.Intn(5) == 0 {
+		if math := rand.Intn(4); math != 3 {
+			message = resMessages[math]
+		} else {
+			message = reqMessage + "じゃねーよw"
+		}
+	}
+	return
 }
