@@ -65,13 +65,3 @@ func getResMessage(reqMessage string) (message string) {
 	message = "https://img.atwikiimg.com/www9.atwiki.jp/f_go/attach/497/179/070-d3.png"
 	return
 }
-
-func getImages(reqMessage string) (message string) {
-	url := "https://www.googleapis.com/customsearch/v1"
-	client := new(http.Client)
-	resp, _ := client.Do(req)
-	defer resp.Body.Close()
-	byteArray, _ := ioutil.ReadAll(resp.Body)
-	fmt.Println(string(byteArray))
-	return
-}
