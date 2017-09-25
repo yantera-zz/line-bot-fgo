@@ -6,9 +6,7 @@ import (
 	"os"
 
 	"github.com/line/line-bot-sdk-go/linebot"
-	"io/ioutil"
 	"math/rand"
-	"net/http"
 	"time"
 )
 
