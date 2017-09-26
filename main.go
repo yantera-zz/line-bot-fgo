@@ -34,7 +34,8 @@ func main() {
 			if event.Type == linebot.EventTypeMessage {
 				switch message := event.Message.(type) {
 				case *linebot.TextMessage:
-					postMessage := linebot.NewTextMessage(getResMessage(message.Text))
+					imageURL := getResMessage(message.Text)
+					postMessage := linebot.NewImageMessage(imageURL, imageURL)
 					if _, err = bot.ReplyMessage(event.ReplyToken, postMessage).Do(); err != nil {
 						log.Print(err)
 					}
@@ -50,17 +51,18 @@ func main() {
 }
 
 func getResMessage(reqMessage string) (message string) {
-	// resMessages := [3]string{"わかるわかる", "それで？それで？", "からの〜？"}
+	resMessages := [3]string{"わかるわかる", "それで？それで？", "からの〜？"}
 
-	// rand.Seed(time.Now().UnixNano())
-	// if rand.Intn(5) == 0 {
-	// if math := rand.Intn(4); math != 3 {
-	// message = resMessages[math]
-	// } else {
-	// message = reqMessage + "じゃねーよw"
-	// }
-	// }
-	imageURL := "https://img.atwikiimg.com/www9.atwiki.jp/f_go/attach/497/179/070-d3.png"
-	message := linebot.NewImageMessage(imageURL)
+	rand.Seed(time.Now().UnixNano())
+	if rand.Intn(5) == 0 {
+		if math := rand.Intn(4); math != 3 {
+			message = resMessages[math]
+		} else {
+			message = reqMessage + "じゃねーよw"
+		}
+	}
+	// imageURL := "https://img.atwikiimg.com/www9.atwiki.jp/f_go/attach/497/179/070-d3.png"
+	// message := linebot.NewImageMessage(imageURL, imageURL)
+	message = "https://img.atwikiimg.com/www9.atwiki.jp/f_go/attach/497/179/070-d3.png"
 	return
 }
