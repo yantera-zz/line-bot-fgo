@@ -50,16 +50,17 @@ func main() {
 }
 
 func getResMessage(reqMessage string) (message string) {
-	resMessages := [3]string{"わかるわかる", "それで？それで？", "からの〜？"}
+	// resMessages := [3]string{"わかるわかる", "それで？それで？", "からの〜？"}
 
-	rand.Seed(time.Now().UnixNano())
-	if rand.Intn(5) == 0 {
-		if math := rand.Intn(4); math != 3 {
-			message = resMessages[math]
-		} else {
-			message = reqMessage + "じゃねーよw"
-		}
-	}
-	message = "https://img.atwikiimg.com/www9.atwiki.jp/f_go/attach/497/179/070-d3.png"
+	// rand.Seed(time.Now().UnixNano())
+	// if rand.Intn(5) == 0 {
+	// if math := rand.Intn(4); math != 3 {
+	// message = resMessages[math]
+	// } else {
+	// message = reqMessage + "じゃねーよw"
+	// }
+	// }
+	imageURL := "https://img.atwikiimg.com/www9.atwiki.jp/f_go/attach/497/179/070-d3.png"
+	message := linebot.NewImageMessage(imageURL)
 	return
 }
