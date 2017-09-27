@@ -63,9 +63,9 @@ func getResMessage(reqMessage string) (message string) {
 		// message = reqMessage + "じゃねーよw"
 		message = "https://wing-auctions.c.yimg.jp/sim?furl=auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0306/users/0/9/5/4/magicalgate_to_kouki-img400x546-1497646371lmetps17023.jpg&dc=1&sr.fs=20000"
 	case 2:
-		message = "http://imgcc.naver.jp/kaze/mission/USER/20160921/76/7800376/121/3035x4200x67fcc59f621919adee67c9.jpg"
+		message = "https://pbs.twimg.com/media/DKe7aJgUEAAVPpW?format=jpg"
 	case 3:
-		message = "http://imgcc.naver.jp/kaze/mission/USER/20160921/76/7800376/113/1146x668x12abbb3a063fb2e5d5eb44d.jpg"
+		message = "https://i.ytimg.com/vi/nodfeKY5Fes/maxresdefault.jpg"
 	}
 	// imageURL := "https://img.atwikiimg.com/www9.atwiki.jp/f_go/attach/497/179/070-d3.png"
 	// message := linebot.NewImageMessage(imageURL, imageURL)
