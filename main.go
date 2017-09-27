@@ -51,18 +51,20 @@ func main() {
 }
 
 func getResMessage(reqMessage string) (message string) {
-	resMessages := [3]string{"わかるわかる", "それで？それで？", "からの〜？"}
+	// resMessages := [3]string{"わかるわかる", "それで？それで？", "からの〜？"}
 
 	rand.Seed(time.Now().UnixNano())
-	if rand.Intn(5) == 0 {
-		if math := rand.Intn(4); math != 3 {
-			message = resMessages[math]
-		} else {
-			message = reqMessage + "じゃねーよw"
-		}
+	math := rand.Intn(2)
+	switch math {
+	case 0:
+		// message = resMessages[math]
+		message = "https://images-na.ssl-images-amazon.com/images/I/513WLTl9xRL._AC_UL320_SR234,320_.jpg"
+	case 1:
+		// message = reqMessage + "じゃねーよw"
+		message = "https://wing-auctions.c.yimg.jp/sim?furl=auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0306/users/0/9/5/4/magicalgate_to_kouki-img400x546-1497646371lmetps17023.jpg&dc=1&sr.fs=20000"
 	}
 	// imageURL := "https://img.atwikiimg.com/www9.atwiki.jp/f_go/attach/497/179/070-d3.png"
 	// message := linebot.NewImageMessage(imageURL, imageURL)
-	message = "https://img.atwikiimg.com/www9.atwiki.jp/f_go/attach/497/179/070-d3.png"
+	// message = "https://img.atwikiimg.com/www9.atwiki.jp/f_go/attach/497/179/070-d3.png"
 	return
 }
