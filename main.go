@@ -61,7 +61,7 @@ func getResMessage(reqMessage string) (message string) {
 		message = "https://images-na.ssl-images-amazon.com/images/I/513WLTl9xRL._AC_UL320_SR234,320_.jpg"
 	case 1:
 		// message = reqMessage + "じゃねーよw"
-		message = "https://wing-auctions.c.yimg.jp/sim?furl=auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0306/users/0/9/5/4/magicalgate_to_kouki-img400x546-1497646371lmetps17023.jpg&dc=1&sr.fs=20000"
+		message = "https://i2.wp.com/fatesoku.com/wp-content/uploads/DK9ymaiVoAA9GN6.jpg"
 	case 2:
 		message = "https://pbs.twimg.com/media/DKe7aJgUEAAVPpW?format=jpg"
 	case 3:
