@@ -10,7 +10,6 @@ import (
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/google"
 	customsearch "google.golang.org/api/customsearch/v1"
-	"io/ioutil"
 	// "math/rand"
 	// "time"
 )

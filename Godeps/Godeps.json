@@ -1,7 +1,7 @@
 {
 	"ImportPath": "github.com/heroku/go-getting-started",
-	"GoVersion": "go1.8",
-	"GodepVersion": "v79",
+	"GoVersion": "go1.9",
+	"GodepVersion": "v80",
 	"Deps": [
 		{
 			"ImportPath": "github.com/line/line-bot-sdk-go/linebot",
